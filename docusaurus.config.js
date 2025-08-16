@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Полина Никитина - педагог-психолог',
   tagline: 'polinanikitina',
-  url: 'http://www.polinanikitina.online',
+  url: 'https://polinanikitina.me',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

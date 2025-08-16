@@ -26,6 +26,21 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
+origin → GitVerse (рабочие коммиты).
+github → GitHub (деплой Pages).
+
+```
+конфиг
+  organizationName: 'sergey-nikitin-ai', // Usually your GitHub org/user name.
+  projectName: 'polinanikitina.me', // Usually your repo name.
+```
+
+```
+set GIT_USER=sergey-nikitin-ai
+set USE_SSH=true
+yarn deploy
+```
+
 Using SSH:
 
 ```

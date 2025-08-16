@@ -51,15 +51,15 @@ const config = {
   ],
   // themes: ['@docusaurus/theme-bootstrap'],
   scripts: [
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+    // "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
     // {
     //   src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
     //   async: true
     // }
-    {
-      src: "//code.jivosite.com/widget/79pRDyOHov",
-      async: true
-    }
+    // {
+    //   src: "//code.jivosite.com/widget/79pRDyOHov",
+    //   async: true
+    // }
   ],
   presets: [
     [

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpelikanka_docu_boot=self.webpackChunkpelikanka_docu_boot||[]).push([[3492],{7966:a=>{a.exports=JSON.parse('{"label":"\u0434\u0440\u0443\u0437\u044c\u044f","permalink":"/blog/tags/\u0434\u0440\u0443\u0437\u044c\u044f","allTagsPath":"/blog/tags","count":1}')}}]);

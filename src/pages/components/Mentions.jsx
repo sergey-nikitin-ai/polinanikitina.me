@@ -1,72 +1,67 @@
-import React from 'react';
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
 
+function ReviewsCarousel() {
+  const reviews = [
+    {
+      text: `Полина Сергеевна - замечательный грамотный специалист. Такие качества как чуткость, внимательность, интуиция помогают довериться ей не только как профессионалу, но и как человеку, способному просто поддержать и успокоить! Мне очень помогли консультации Полины Сергеевны. Получилось найти правильное решение в непростой ситуации и даже сделать выбор! Огромная Вам благодарность за Ваш труд!`,
+      author: "Юлия Воробьёва",
+    },
+    {
+      text: `У сына были проблемы с обучением в школе. Часто отвлекался, забывал и терял вещи, я очень переживала из-за его рассеянности. Полина дала реальные советы, которые работают, порекомендовала книги и упражнения, по которым мы занимались с ребёнком. Спасибо!`,
+      author: "Александра",
+    },
+    {
+      text: `Полина помогла увидеть проблему, которую я совершенно неосознанно допускала при воспитании двоих детей. Оказалось, что просто убрав из обихода несколько моих формулировок по отношению к старшему ребёнку, удалось наладить дружеские отношения между детьми. Я в шоке, что все наши проблемы были на поверхности.`,
+      author: "Инна Савельева",
+    },
+  ];
 
-function UncontrolledExample() {
-  
-  const CarouselItemStyle = { height : '370px' }
-  
   return (
-    <section id="mentions" class="row gx-4 justify-content-center">
-      <div class="col-lg-8">
-        <h1 class="mb-4" style={{ 'text-align': 'center' }}>Отзывы</h1>
+  <section
+    id="mentions"
+    className="row gx-4 justify-content-center"
+    style={{ backgroundColor: "#fcf8f2", paddingTop: "2rem", paddingBottom: "2rem" }}
+  >
+      <style>{`
+        #mentions .carousel-indicators li {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 3px;
+          background-color: #d47a3c;
+          opacity: 1;
+        }
+        #mentions .carousel-indicators .active {
+          background-color: #a64d1a;
+        }
+        #mentions .carousel-caption {
+          text-align: left !important;
+        }
+        #mentions p {
+          font-size: 0.95rem;
+          margin-bottom: 0.5rem;
+        }
+      `}</style>
 
-        <div id="mentionsCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#mentionsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#mentionsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#mentionsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000" style={CarouselItemStyle}>
-              <div class="carousel-caption d-block d-md-block">
-              {/* <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg> */}
-                <h5></h5>
-                <p>
-                  Полина Сергеевна - замечательный грамотный специалист. Такие качества как чуткость, внимательность, интуиция помогают довериться ей не только как профессионалу, но и как человеку, способному просто поддержать и успокоить!
-                  Мне очень помогли консультации Полины Сергеевны. Получилось
-                  найти правильное решение в не простой ситуации и даже сделать выбор!
-                  Огромная Вам благодарность за Ваш труд!
-                </p>
-                <p><b>Юлия Воробьёва</b></p>
+      <div className="col-lg-8">
+        <h1 className="mb-3 text-center" style={{ fontSize: "1.8rem" }}>Отзывы</h1>
+        <Carousel>
+          {reviews.map((r, idx) => (
+            <Carousel.Item key={idx}>
+              <div
+                className="p-3 text-center"
+                style={{ minHeight: "250px", display: "flex", flexDirection: "column", justifyContent: "center" }}
+              >
+                <p>{r.text}</p>
+                <p><b>{r.author}</b></p>
               </div>
-            </div>
-            
-            <div class="carousel-item" data-bs-interval="2000" style={CarouselItemStyle}>
-              <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-              <div class="carousel-caption d-block d-md-block">
-                <p>У сына были проблемы с обучением в школе. Часто отвлекался, забывал и терял вещи, 
-                  я очень переживала из-за его рассеянности. Полина дала реальные советы, которые работают, 
-                  порекомендовала книги и упражнения по котором мы занимались с ребёнком. Спасибо! </p>
-                <p><b>Александра</b></p>
-              </div>
-            </div>
-
-            <div class="carousel-item" style={CarouselItemStyle}>
-              <svg className="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-              <div class="carousel-caption d-block d-md-block">
-                <h5></h5>
-                <p>Полина помогла увидеть проблему, которую я, совершенно неосознанно допускала при воспитании двоих 
-                  детей. Оказалось, что просто убрав из обихода несколько моих формулировок по отношению к старшему 
-                  ребенку, удалось наладить дружеские отношения между детьми. Я в шоке, что все наши проблемы 
-                  были на поверхности.</p>
-                <p><b>Инна Савельева</b></p>
-
-              </div>
-            </div>
-
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#mentionsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#mentionsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-
-      </div></section>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+    </section>
   );
 }
 
-export default UncontrolledExample;
+export default ReviewsCarousel;

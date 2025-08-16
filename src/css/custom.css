@@ -24,41 +24,6 @@
   color: #000 !important
 }
 
-/********************  mentions  *********************/
-#mentions{
-  background-color: #fcf8f2;
-}
-
-#mentionsCarousel .carousel-caption {
-  text-align: left !important
-}
-
-#mentionsCarousel .bd-placeholder-img{
-  height: 300px;
-}
-
-#mentionsCarousel .bd-placeholder-img rect{
-  /* height: 500px */
-  fill: #fcf8f2 !important
-}
-
-/********************  mentions  *********************/
-#services .accordion-button:not(.collapsed){
-  /* color: #b4c589 !important; */
-  color: black !important; 
-  background-color: #ffffff !important;
-  font-size: x-large;
-}
-
-#BitrixForm{
-  background-image: url(/img/vetka_razmyito.jpg);
-  height: 100%;
-}
-
-#PageFooter{
-  background-image: url(/img/vetka_razmyito.jpg);
-  height: 900px;
-}
 
 /******************** BLOG *************************/
 

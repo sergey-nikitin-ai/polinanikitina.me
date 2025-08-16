@@ -36,9 +36,11 @@ github → GitHub (деплой Pages).
 ```
 
 ```
-set GIT_USER=sergey-nikitin-ai
-set USE_SSH=true
+GIT_USER="sergey-nikitin-ai"
+USE_SSH="true"
 yarn deploy
+
+$env:GIT_USER="sergey-nikitin-ai"; $env:USE_SSH="true"; yarn deploy
 ```
 
 Using SSH:

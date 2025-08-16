@@ -9,8 +9,9 @@ import Education from './components/Education';
 import Price from './components/Price';
 import Prices from './components/Services';
 import Mentions from './components/Mentions';
-import BitrixForm from './components/BitrixForm'
+// import BitrixForm from './components/BitrixForm'
 import PageFooter from './components/PageFooter';
+import FloatingPhoneIcon from './components/FloatingPhoneIcon';
 
 function ContainerExample() {
   const {siteConfig} = useDocusaurusContext();
@@ -29,6 +30,7 @@ function ContainerExample() {
       <Price></Price>
       {/* <BitrixForm></BitrixForm> */}
       <PageFooter></PageFooter>
+      <FloatingPhoneIcon />
     </div>
     // </ThemeProvider>
   );

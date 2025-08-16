@@ -1,0 +1,6 @@
+<a className="nav-link" href="#about">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-house-fill" viewBox="0 0 16 16">
+    <path d="M8 3.293l6 6V13a1 1 0 0 1-1 1h-3v-4H6v4H3a1 1 0 0 1-1-1V9.293l6-6z"/>
+    <path fillRule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6 6A1 1 0 0 1 14 8H2a1 1 0 0 1-.707-1.707l6-6z"/>
+  </svg>
+</a>

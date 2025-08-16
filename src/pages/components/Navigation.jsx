@@ -12,11 +12,11 @@ export default function Navigation(props) {
         { text: "Обо мне", url: "#about" },
         { text: "Услуги", url: "#services" },
         { text: "Цены", url: "#price" },
-        { text: "Блог", url: "/blog" },
+        { text: "Вопросы", url: "/blog" },
         { text: "Подкаст", url: "/podcast" }
     ];
 
-    const mobileVisibleItems = ["Обо мне", "Блог", "Подкаст"];
+    const mobileVisibleItems = ["Обо мне", "Вопросы", "Подкаст"];
 
     // Рендерим иконку дома для "Обо мне"
     const renderItem = (item) => {

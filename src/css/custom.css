@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 #services {
   background-color: #fcf8f2;
 }

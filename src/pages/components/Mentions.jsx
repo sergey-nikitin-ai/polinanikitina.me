@@ -1,28 +1,14 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import reviews from "../../data/reviews.json";
 
 function ReviewsCarousel() {
-  const reviews = [
-    {
-      text: `Полина Сергеевна - замечательный грамотный специалист. Такие качества как чуткость, внимательность, интуиция помогают довериться ей не только как профессионалу, но и как человеку, способному просто поддержать и успокоить! Мне очень помогли консультации Полины Сергеевны. Получилось найти правильное решение в непростой ситуации и даже сделать выбор! Огромная Вам благодарность за Ваш труд!`,
-      author: "Юлия Воробьёва",
-    },
-    {
-      text: `У сына были проблемы с обучением в школе. Часто отвлекался, забывал и терял вещи, я очень переживала из-за его рассеянности. Полина дала реальные советы, которые работают, порекомендовала книги и упражнения, по которым мы занимались с ребёнком. Спасибо!`,
-      author: "Александра",
-    },
-    {
-      text: `Полина помогла увидеть проблему, которую я совершенно неосознанно допускала при воспитании двоих детей. Оказалось, что просто убрав из обихода несколько моих формулировок по отношению к старшему ребёнку, удалось наладить дружеские отношения между детьми. Я в шоке, что все наши проблемы были на поверхности.`,
-      author: "Инна Савельева",
-    },
-  ];
-
   return (
-  <section
-    id="mentions"
-    className="row gx-4 justify-content-center"
-    style={{ backgroundColor: "#fcf8f2", paddingTop: "2rem", paddingBottom: "2rem" }}
-  >
+    <section
+      id="mentions"
+      className="row gx-4 justify-content-center"
+      style={{ backgroundColor: "#fcf8f2", paddingTop: "2rem", paddingBottom: "2rem" }}
+    >
       <style>{`
         #mentions .carousel-indicators li {
           width: 10px;
@@ -50,11 +36,20 @@ function ReviewsCarousel() {
           {reviews.map((r, idx) => (
             <Carousel.Item key={idx}>
               <div
-                className="p-3 text-center"
-                style={{ minHeight: "250px", display: "flex", flexDirection: "column", justifyContent: "center" }}
+                className="p-3"
+                style={{
+                  minHeight: "250px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  textAlign: "left",
+                }}
               >
-                <p>{r.text}</p>
-                <p><b>{r.author}</b></p>
+                <p style={{ flex: 1 }}>{r.text}</p>
+                <p style={{ alignSelf: "flex-end", marginTop: "1rem", fontWeight: "bold" }}>
+                  {r.author}
+                </p>
               </div>
             </Carousel.Item>
           ))}

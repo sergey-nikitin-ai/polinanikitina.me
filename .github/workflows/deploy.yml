@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    # Запускать workflow при коммите в ветку main
+    branches:
+      - master 
+      # Если ваша основная ветка называется master, замените 'main' на 'master'
+
+jobs:
+  deploy:
+    name: Deploy Docusaurus to gh-pages
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        # Клонируем репозиторий
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        # Устанавливаем Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Используйте подходящую версию Node.js
+
+      - name: Install dependencies
+        # Устанавливаем зависимости Docusaurus
+        run: npm install 
+
+      - name: Build website
+        # Запускаем сборку Docusaurus. Результаты сборки будут в папке 'build'
+        run: npm run build
+        
+      # Этот экшн специально разработан для деплоя статических сайтов в gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # Токен для авторизации. GITHUB_TOKEN предоставляется GitHub Actions автоматически
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Папка с результатами сборки Docusaurus
+          publish_dir: ./build
+          # Ветка, в которую будет опубликован статический сайт
+          publish_branch: gh-pages 
+          # Для корректной работы Docusaurus с GitHub Pages
+          cname: '' # Установите CNAME, если используете собственный домен
+          keep_files: false
+          # Используется для того, чтобы GH Pages не обрабатывал файлы как Jekyll
+          # Это обычно добавляет файл .nojekyll в корень ветки gh-pages
+          external_repository: ''
+          force_orphan: true

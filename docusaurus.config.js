@@ -79,7 +79,7 @@ const config = {
         // },
         blog: {
           showReadingTime: true,
-          blogSidebarTitle: 'Вопросы от родителей:',
+          blogSidebarTitle: 'Список статей:',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -110,11 +110,13 @@ const config = {
         //   src: 'img/logo.svg',
         // },
         items: [
+          // основное меню - src\pages\components\Navigation.jsx
           { to: '/#about', label: 'Обо мне', position: 'left' },
-          { to: '/blog', label: 'Вопросы', position: 'left' },
+          { to: '/blog/pdf-list', label: 'Скачай и практикуй', position: 'left' },
           { to: '/podcast', label: 'Подкаст', position: 'left' },
-          // { to: '/#services', label: 'Услуги', position: 'left' },
-          // { to: '/#price', label: 'Цены', position: 'left' },
+          { to: '/blog/faq', label: 'Ответы на вопросы', position: 'left' },
+          // ---
+          { to: 'https://t.me/polinanikitina_me', label: 'Канал в Telegram', position: 'right' },
         ],
       },
       // footer: {

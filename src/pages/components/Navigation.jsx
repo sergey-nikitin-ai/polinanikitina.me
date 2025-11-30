@@ -12,8 +12,9 @@ export default function Navigation(props) {
         { text: "Обо мне", url: "#about" },
         { text: "Услуги", url: "#services" },
         { text: "Цены", url: "#price" },
-        { text: "Вопросы", url: "/blog" },
-        { text: "Подкаст", url: "/podcast" }
+        { text: "Скачай и практикуй", url: "/blog/pdf-list" },
+        { text: "Подкаст", url: "/podcast" },
+        { text: "Ответы на вопросы", url: "/blog/faq" }
     ];
 
     const mobileVisibleItems = ["Обо мне", "Вопросы", "Подкаст"];

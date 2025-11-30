@@ -120,7 +120,7 @@ export default function Navigation(props) {
             </h3>
             <p>
               В 2021 году вместе со своей дочерью создала&nbsp;
-              <a href="/blog/welcome" className="a-custom">
+              <a href="/podcast" className="a-custom">
                 подкаст
               </a>
               , в котором нахожу ответы на самые сложные детские вопросы, а
